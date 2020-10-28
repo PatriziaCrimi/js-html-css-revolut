@@ -16,7 +16,22 @@ ul {
 a {
   text-decoration: none;
   color: rgb(139, 149, 158);
-  margin: 0 15px;
+}
+
+h2 {
+  color: rgb(206, 213, 219);
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+span {
+  color: rgb(6, 102, 235);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  bottom: 10px;
 }
 
 #page-wrapper {
@@ -46,13 +61,20 @@ header nav > #nav-right {
   align-items: center;
 }
 
+/* Navbar left */
 #nav-left > a.logo {
   display: inline-block;
   width: 50px;
+  padding: 0;
 }
 
 #nav-left > a.logo > img {
   width: 100%;
+}
+
+#nav-left a,
+#nav-right .dropdown-item > a {
+  padding: 0 20px;
 }
 
 #nav-right > ul > li.dropdown-item {
@@ -77,25 +99,74 @@ header nav > #nav-right {
   display: block;
 }
 
-#nav-right .dropdown-menu > ul > li > a {
+#nav-right .dropdown-menu a {
   display: inline-block;
-  padding: 15px 0;
+  padding: 15px 0 15px 10px;
 }
 
+#nav-right > ul > li > #functionality {
+  width: 1000px;
+  left: 40%;
+  transform: translateX(-40%);
+}
+
+#functionality::after {
+  content: '';
+  display: table;
+  clear:both;
+}
+
+#functionality > .list-wrapper {
+  float: left;
+  padding-right: 20px;
+  padding-left: 15px;
+}
+
+#functionality .title {
+  display: flex;
+  align-items: center;
+  padding: 15px 0 15px 10px;
+}
+
+#functionality .title > .icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(206, 213, 219);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#functionality .title > .icon > i {
+  color: #fff;
+  font-size: 14px;
+}
+
+#functionality a.soon {
+  color: rgb(25, 28, 31);
+  opacity: 0.2;
+}
+
+/* Navbar right */
 #nav-right > .btn {
   margin-left: 15px;
-  padding: 15px;
+  padding: 12px 18px;
   border-radius: 10px;
+  font-weight: 500;
 }
 
 #nav-right > a.btn.btn-light {
   display: inline-block;
   background-color: rgba(25, 28, 31, 0.08);
   color: rgb(25, 28, 31);
+  border: 1px solid background-color: rgba(25, 28, 31, 0.08);
 }
 
 #nav-right > button.btn.btn-dark {
   background-color: rgb(25, 28, 31);
   color: rgb(255, 255, 255);
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  border: 1px solid rgb(25, 28, 31);
 }
