@@ -40,8 +40,12 @@ span {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
+}
+
+.focus {
+  font-weight: 600;
+  color: rgb(25, 28, 31);
 }
 
 /* Header */
@@ -74,7 +78,20 @@ header nav > #nav-right {
 
 #nav-left a,
 #nav-right .dropdown-item > a {
-  padding: 0 20px;
+  padding: 0 18px;
+  display: none;
+}
+
+#nav-left a:hover,
+#nav-right .dropdown-item > a:hover,
+#nav-right .dropdown-menu a:hover {
+  color: rgb(25, 28, 31);
+  transition: color 0.25s;
+}
+
+#nav-right .burger-menu-icon > i {
+  font-size: 20px;
+  cursor: pointer;
 }
 
 #nav-right > ul > li.dropdown-item {
@@ -106,8 +123,8 @@ header nav > #nav-right {
 
 #nav-right > ul > li > #functionality {
   width: 1000px;
-  left: 40%;
-  transform: translateX(-40%);
+  left: 35%;
+  transform: translateX(-35%);
 }
 
 #functionality::after {
@@ -154,13 +171,18 @@ header nav > #nav-right {
   padding: 12px 18px;
   border-radius: 10px;
   font-weight: 500;
+  display: none;
 }
 
 #nav-right > a.btn.btn-light {
-  display: inline-block;
   background-color: rgba(25, 28, 31, 0.08);
   color: rgb(25, 28, 31);
   border: 1px solid background-color: rgba(25, 28, 31, 0.08);
+}
+
+#nav-right > a.btn.btn-light:hover {
+  background-color: rgba(25, 28, 31, 0.16);
+  transition: background-color 0.25s;
 }
 
 #nav-right > button.btn.btn-dark {
@@ -169,4 +191,55 @@ header nav > #nav-right {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   border: 1px solid rgb(25, 28, 31);
+  cursor: pointer;
+}
+
+#nav-right > button.btn.btn-dark:hover {
+  background-color: rgba(25, 28, 31, 0.84);
+}
+
+/* ------------------- MEDIA QUERY ------------------- */
+
+/* Breakpoint Small 576px sm */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Breakpoint Medium 768px md */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Breakpoint Large 992px lg */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Breakpoint Burger menu 1080px */
+@media screen and (min-width: 1080px) {
+  #nav-left a,
+  #nav-right .dropdown-item > a {
+    display: inline-block;
+  }
+
+  #nav-right .burger-menu-icon > i {
+    display: none;
+  }
+
+  #nav-right > .btn {
+    display: inline-block;
+  }
+}
+
+/* Breakpoint Extra Large 1200px lg */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
