@@ -5,8 +5,16 @@ $(document).ready(function() {
   $('.dropdown-item').mouseenter(function() {
     // Finding and closing any already open dropdown menu
     $('.active').removeClass('active');
+
     // Finding the dropdown menu corresponding to the dropdown item
+    // ***** SOLUTION 1: CHILDREN() *****
+    var current_dropdown_menu = $(this).children('.dropdown-menu');
+
+    /*
+    // ***** SOLUTION 2: FIND() *****
     var current_dropdown_menu = $(this).find('.dropdown-menu');
+    */
+
     // Opening the corresponding dropdown menu
     current_dropdown_menu.addClass('active');
   });
