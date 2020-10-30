@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Un modo migliore per gestire le tue finanze | Revolut IT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,207 +13,259 @@
   </head>
   <body>
     <div id="page-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- Header -->
-            <header>
-              <!-- Navbar -->
-              <nav>
-                <div id="nav-left">
-                  <a class="logo" href="#">
-                    <img src="img/revolut_logo.svg" alt="Revolut logo">
-                  </a>
-                  <a class="focus" href="#">Personale</a>
-                  <a href="#">Business</a>
-                </div>
-                <div id="nav-right">
-                  <!-- Hamburger menu -->
-                  <div class="burger-menu-icon">
-                    <i class="fas fa-bars"></i>
+      <!-- Header -->
+      <header>
+        <div class="container">
+          <!-- Navbar -->
+          <nav>
+            <div id="nav-left">
+              <a class="logo" href="#">
+                <img src="img/revolut_logo.svg" alt="Revolut logo">
+              </a>
+              <a class="focus" href="#">Personale</a>
+              <a href="#">Business</a>
+            </div>
+            <div id="nav-right">
+              <!-- Hamburger menu icon -->
+              <div class="burger-menu-icon">
+                <i class="fas fa-bars"></i>
+              </div>
+              <!-- Extended menu -->
+              <ul>
+                <li class="dropdown-item">
+                  <a href="#">Funzionalità</a>
+                  <div id="functionality" class="dropdown-menu">
+                    <div class="list-wrapper">
+                      <div class="title">
+                        <div class="icon">
+                          <i class="fas fa-house-user"></i>
+                        </div>
+                        <h2>conto</h2>
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="#">Budget e statistiche</a>
+                        </li>
+                        <li>
+                          <a href="#">Conto Junior</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="list-wrapper">
+                      <div class="title">
+                        <div class="icon">
+                          <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <h2>investimenti e risparmi</h2>
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="#">Azioni</a>
+                        </li>
+                        <li>
+                          <a href="#">Crypto</a>
+                        </li>
+                        <li>
+                          <a href="#">Prodotti</a>
+                        </li>
+                        <li>
+                          <a href="#">Salvadanai</a>
+                        </li>
+                        <li>
+                          <a class="soon">Salvadanai Deposito</a>
+                          <span>prossimamente</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="list-wrapper">
+                      <div class="title">
+                        <div class="icon">
+                          <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h2>pagamenti</h2>
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="#">Effettua e ricevi pagamenti</a>
+                        </li>
+                        <li>
+                          <a href="#">Bonifici internazionali</a>
+                        </li>
+                        <li>
+                          <a href="#">Fatture di gruppo</a>
+                        </li>
+                        <li>
+                          <a href="#">Abbonamenti</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="list-wrapper">
+                      <div class="title">
+                        <div class="icon">
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <h2>extra</h2>
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="#">Donazioni</a>
+                        </li>
+                        <li>
+                          <a href="#">Assicurazione internazionale</a>
+                        </li>
+                        <li>
+                          <a href="#">Assicurazione del dispositivo</a>
+                        </li>
+                        <li>
+                          <a href="#">Sicurezza</a>
+                        </li>
+                        <li>
+                          <a class="soon">Rewards</a>
+                          <span>prossimamente</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>  <!-- End of "functionality" dropdown menu -->
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Abbonamenti</a>
+                  <div class="dropdown-menu">
+                    <ul>
+                      <li>
+                        <a href="#">Standard</a>
+                      </li>
+                      <li>
+                        <a href="#">Premium</a>
+                      </li>
+                      <li>
+                        <a href="#">Metal</a>
+                      </li>
+                      <li>
+                        <a href="#">Confronta i piani</a>
+                      </li>
+                    </ul>
                   </div>
-                  <!-- Extended menu -->
-                  <ul>
-                    <li class="dropdown-item">
-                      <a href="#">Funzionalità</a>
-                      <div id="functionality" class="dropdown-menu">
-                        <div class="list-wrapper">
-                          <div class="title">
-                            <div class="icon">
-                              <i class="fas fa-house-user"></i>
-                            </div>
-                            <h2>conto</h2>
-                          </div>
-                          <ul>
-                            <li>
-                              <a href="#">Budget e statistiche</a>
-                            </li>
-                            <li>
-                              <a href="#">Conto Junior</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="list-wrapper">
-                          <div class="title">
-                            <div class="icon">
-                              <i class="fas fa-piggy-bank"></i>
-                            </div>
-                            <h2>investimenti e risparmi</h2>
-                          </div>
-                          <ul>
-                            <li>
-                              <a href="#">Azioni</a>
-                            </li>
-                            <li>
-                              <a href="#">Crypto</a>
-                            </li>
-                            <li>
-                              <a href="#">Prodotti</a>
-                            </li>
-                            <li>
-                              <a href="#">Salvadanai</a>
-                            </li>
-                            <li>
-                              <a class="soon">Salvadanai Deposito</a>
-                              <span>prossimamente</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="list-wrapper">
-                          <div class="title">
-                            <div class="icon">
-                              <i class="fas fa-exchange-alt"></i>
-                            </div>
-                            <h2>pagamenti</h2>
-                          </div>
-                          <ul>
-                            <li>
-                              <a href="#">Effettua e ricevi pagamenti</a>
-                            </li>
-                            <li>
-                              <a href="#">Bonifici internazionali</a>
-                            </li>
-                            <li>
-                              <a href="#">Fatture di gruppo</a>
-                            </li>
-                            <li>
-                              <a href="#">Abbonamenti</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="list-wrapper">
-                          <div class="title">
-                            <div class="icon">
-                              <i class="fas fa-star"></i>
-                            </div>
-                            <h2>extra</h2>
-                          </div>
-                          <ul>
-                            <li>
-                              <a href="#">Donazioni</a>
-                            </li>
-                            <li>
-                              <a href="#">Assicurazione internazionale</a>
-                            </li>
-                            <li>
-                              <a href="#">Assicurazione del dispositivo</a>
-                            </li>
-                            <li>
-                              <a href="#">Sicurezza</a>
-                            </li>
-                            <li>
-                              <a class="soon">Rewards</a>
-                              <span>prossimamente</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>  <!-- End of "functionality" dropdown menu -->
-                    </li>
-                    <li class="dropdown-item">
-                      <a href="#">Abbonamenti</a>
-                      <div class="dropdown-menu">
-                        <ul>
-                          <li>
-                            <a href="#">Standard</a>
-                          </li>
-                          <li>
-                            <a href="#">Premium</a>
-                          </li>
-                          <li>
-                            <a href="#">Metal</a>
-                          </li>
-                          <li>
-                            <a href="#">Confronta i piani</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <a href="#">Chi siamo</a>
-                      <div class="dropdown-menu">
-                        <ul>
-                          <li>
-                            <a href="#">Chi siamo</a>
-                          </li>
-                          <li>
-                            <a href="#">Blog</a>
-                          </li>
-                          <li>
-                            <a href="#">Leadership</a>
-                          </li>
-                          <li>
-                            <a href="#">Affiliate</a>
-                          </li>
-                          <li>
-                            <a href="#">Influencer</a>
-                          </li>
-                          <li>
-                            <a href="#">Lavora con noi</a>
-                          </li>
-                          <li>
-                            <a href="#">Cultura</a>
-                          </li>
-                          <li>
-                            <a href="#">Diversità e inclusione</a>
-                          </li>
-                          <li>
-                            <a href="#">Contatto</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <a href="#">Aiuto</a>
-                      <div class="dropdown-menu">
-                        <ul>
-                          <li>
-                            <a href="#">Centro assistenza</a>
-                          </li>
-                          <li>
-                            <a href="#">Community</a>
-                          </li>
-                          <li>
-                            <a href="#">Sicurezza</a>
-                          </li>
-                          <li>
-                            <a href="#">Stato di sistema</a>
-                          </li>
-                          <li>
-                            <a href="#">API Sviluppatore</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                  <!-- Buttons -->
-                  <a href="#" class="btn btn-light">Accedi</a>
-                  <button type="button" class="btn btn-dark">Scarica l'app</button>
-                </div>
-              </nav>
-            </header>
-          </div>
-        </div>
-      </div>  <!-- End of container -->
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Chi siamo</a>
+                  <div class="dropdown-menu">
+                    <ul>
+                      <li>
+                        <a href="#">Chi siamo</a>
+                      </li>
+                      <li>
+                        <a href="#">Blog</a>
+                      </li>
+                      <li>
+                        <a href="#">Leadership</a>
+                      </li>
+                      <li>
+                        <a href="#">Affiliate</a>
+                      </li>
+                      <li>
+                        <a href="#">Influencer</a>
+                      </li>
+                      <li>
+                        <a href="#">Lavora con noi</a>
+                      </li>
+                      <li>
+                        <a href="#">Cultura</a>
+                      </li>
+                      <li>
+                        <a href="#">Diversità e inclusione</a>
+                      </li>
+                      <li>
+                        <a href="#">Contatto</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Aiuto</a>
+                  <div class="dropdown-menu">
+                    <ul>
+                      <li>
+                        <a href="#">Centro assistenza</a>
+                      </li>
+                      <li>
+                        <a href="#">Community</a>
+                      </li>
+                      <li>
+                        <a href="#">Sicurezza</a>
+                      </li>
+                      <li>
+                        <a href="#">Stato di sistema</a>
+                      </li>
+                      <li>
+                        <a href="#">API Sviluppatore</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <!-- Buttons -->
+              <a href="#" class="btn btn-light">Accedi</a>
+              <button type="button" class="btn btn-dark">Scarica l'app</button>
+            </div>
+          </nav>
+          <div id="hamburger-menu">
+            <div class="burger-menu-top">
+              <div class="burger-top-left">
+                <ul>
+                  <li>
+                    <a class="focus" href="#">Personale</a>
+                  </li>
+                  <li>
+                    <a href="#">Business</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="burger-top-right">
+                <i class="fas fa-times"></i>
+              </div>
+            </div>  <!-- End of hamburger menu top -->
+            <div class="burger-menu-bottom">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span>Funzionalità</span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Abbonamenti</span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Chi siamo</span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Aiuto</span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Seguici</span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>  <!-- End of hamburger menu bottom -->
+          </div>  <!-- End of hamburger menu -->
+        </div>  <!-- End of container -->
+      </header>
+      <div class="buttons">
+        <!-- Buttons -->
+        <a href="#" class="btn btn-light">Accedi</a>
+        <button type="button" class="btn btn-dark">Scarica l'app</button>
+      </div>
     </div>  <!-- End of page-wrapper -->
   </body>
 </html>
